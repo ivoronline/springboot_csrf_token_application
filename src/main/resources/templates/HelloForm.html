@@ -1,0 +1,21 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+  <title> HELLO FORM </title>
+
+  <style type="text/css">
+      div { display:flex; flex-direction:column; align-items:center; border: solid 1pt; margin: 10pt 50pt; background-color: aliceblue }
+  </style>
+
+  <div>
+    <h2> HELLO FORM </h2>
+    <form method="GET" action="SayHello">
+      <p> <input type="text"   name="name"   placeholder="Enter your name"/> </p>
+      <p> <input type="submit" name="submit" style="width:100%"           /> </p>
+          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    </form>
+  </div>
+
+<html>
+
+
+
